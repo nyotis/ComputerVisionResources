@@ -1,0 +1,14 @@
+Software demo of my early PhD experiments. The research software was originally implemented by Christian J. Walder. Our end-goal was to achieve a watertight reconstruction of deformable 3D scan sequences.
+
+=- Technical details -=
+
+A partition of unity fit algorithm was applied to 231 deformable 3D scans. The input to the software was captured with Dimensional Imaging's standard DI3D™ FCS-100 system on July 2008. This rig consisted of four 10 MP cameras generating 3D facial surface images with highly detailed 20 MP surface texture maps. The capture rate was approximately 20 FPS and the system was properly calibrated targeting human faces. The assembly was based on a passive stereo photogrammetry proprietary method developed by Dimensional Imaging (http://www.youtube.com/user/DimensionalImaging) resulting in 3D meshes - that is frames, in the typical *.OBJ format coupled with texture information.
+
+The blue planes on the video represent the blue-colored background and were erroneously introduced by the implicit fit - keep in mind that Walder's primary focus was a clean and simple mathematical solution to the problem rather than a production-strength software. 
+
+Note how the approximating implicit surface naturally smooths out geometric features and other attributes of the input data such as color and texture. Similarly, the underlying topological structure is also smoothed away.
+
+For details on the implementation, see publication by: 
+C. Walder, M. Breidt, H. Buelthoff, B. Schölkopf and Cristobal Curio: Markerless 3D Face Tracking, DAGM 2009.  
+
+Kudos to Christian Walder, Colin W. Urquhart and Anders Stunstedt.
